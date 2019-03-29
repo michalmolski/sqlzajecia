@@ -6,6 +6,7 @@ CREATE DATABASE FirmaKomputerowa
 --DROP TABLE [FirmaKomputerowa].[dbo].[LAPTOP];
 --DROP TABLE [FirmaKomputerowa].[dbo].[DRUKARKI];
 
+
 CREATE TABLE [FirmaKomputerowa].[dbo].[Produkty]
 (
 	producent nvarchar(30),
