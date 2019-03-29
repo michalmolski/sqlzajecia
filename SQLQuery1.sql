@@ -7,12 +7,7 @@ CREATE DATABASE FirmaKomputerowa
 --DROP TABLE [FirmaKomputerowa].[dbo].[DRUKARKI];
 
 
-CREATE TABLE [FirmaKomputerowa].[dbo].[Produkty]
-(
-	producent nvarchar(30),
-	model nvarchar(30)  PRIMARY KEY NOT NULL,
-	typ nvarchar(30),
-);
+
 CREATE TABLE [FirmaKomputerowa].[dbo].[PC]
 (
 	model nvarchar(30) PRIMARY KEY NOT NULL,
@@ -41,4 +36,14 @@ CREATE TABLE [FirmaKomputerowa].[dbo].[DRUKARKI]
 	kolor BIT,
 	typ nvarchar(30),
 	cena MONEY,
+);
+CREATE TABLE [FirmaKomputerowa].[dbo].[Produkty]
+(
+	producent nvarchar(30),
+	model nvarchar(30)  PRIMARY KEY NOT NULL,
+	typ nvarchar(30),
+	FOREIGN KEY (model) REFERENCES [FirmaKomputerowa].[dbo].[PC](model),
+	FOREIGN KEY (model) REFERENCES [FirmaKomputerowa].[dbo].[LAPTOP](model),
+	FOREIGN KEY (model) REFERENCES [FirmaKomputerowa].[dbo].[DRUKARKI](model) 
+
 );
