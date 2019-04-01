@@ -136,8 +136,8 @@ namespace ConsoleApp1
                     dev = type[rand.Next(type.Length)];
                     tcol = color[rand.Next(color.Length)];
                     price = (50 + rand.Next(40)) * 10;
-                    fwrite.WriteLine("INSERT INTO [FirmaKomputerowa].[dbo].[DRUKARKA]" +
-                        " VALUES('" + products[i, 0] + "'," + tcol + ",'" + dev+"',"+price);
+                    fwrite.WriteLine("INSERT INTO [FirmaKomputerowa].[dbo].[DRUKARKI]" +
+                        " VALUES('" + products[i, 0] + "'," + tcol + ",'" + dev+"',"+price+")");
 
                 }
                
@@ -154,9 +154,9 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             int lpr = 60;
-            Inserts_zaj i1 = new Inserts_zaj();
-            Inserts_zaj i2 = new Inserts_zaj();
+            Inserts_zaj i1 = new Inserts_zaj();           
             i1.Save(lpr);
+            Inserts_zaj i2 = new Inserts_zaj();
             i2.Save(lpr);
             Console.ReadKey(true);
 

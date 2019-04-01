@@ -1,7 +1,7 @@
 USE master
-DROP DATABASE FirmaKomputerowa
+--DROP DATABASE FirmaKomputerowa
 CREATE DATABASE FirmaKomputerowa
-
+USE FirmaKomputerowa
 -- Tworzenie tabel------------
 CREATE TABLE [FirmaKomputerowa].[dbo].[Produkty]
 (
@@ -116,3 +116,4 @@ VALUES
 		(1, 'atrament' ,180.0, 'H28US'),
 		(1, 'laser' ,600.0, 'HX8US'),
 		(0, 'laser' ,350.0, 'Q83KS');
+R: C:\Studia\SEMESTR 10\KWZP\sqlzaj1\sqlzajecia\INSERT_01.04.2019 22-51-58.sql"
